@@ -82,17 +82,14 @@ function renderTime() {
 
  // ..and then checks to see if the time has run out
   if (secondsElapsed >= totalSeconds) {
-    // if (status === "Working") {
-    //   alert("Time for a break!");
-    //   play();
-    // } else {
-    //   alert("Time to get back to work!");
-    //   play();
-    // }
+    if (status === "Working") {
+      play();
+      stopTimer();
+    } else {
+      play();
+      stopTimer();
+    }
 
-    play();
-
-    stopTimer();
   }
 }
 
